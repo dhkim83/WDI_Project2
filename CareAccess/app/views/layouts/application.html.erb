@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CareAccess</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>Welcome to CareAccess!
+	<% if current_user %>
+<%= link_to "Log out", session_path, method: :delete %>
+<% else %>
+<%= link_to "Sign up", new_user_path %>
+<%= link_to "Log in", new_session_path %>
+
+<% end %> 
+
+
+<h1>Selections </h1>
+<p>
+
+<%= link_to "By Primary_Care only", selections_path(selectionfilter:"primary") %>
+<%= link_to "By Registered_Nurse only", selections_path(selectionfilter:"nurse") %> 
+<%= link_to "By Location only", selections_path(selectionfilter:"location") %>
+<%= link_to "By State_Loan_Repayment_only", selections_path(selectionfilter:"benefit") %>
+<%= link_to "By NHSC_Loan_Repayment_only", selections_path(selectionfilter:"NHSC") %>
+<%= link_to "Show All",          selections_path(selectionfilter:"showall") %>
+  <br>
+</p>
+  <ul>
+<% @selections.each do |s| %>
+  <li>
+    <strong> <%= s.selection %> </strong> -- 
+    (<%= s.selection %>) -- 
+    <i><%= link_to "click for selection", selection_path(s) %></i>
+  </li>
+  <% end %>
+</ul>
+
+
+<%= yield %>
+
+</body>
+</html>

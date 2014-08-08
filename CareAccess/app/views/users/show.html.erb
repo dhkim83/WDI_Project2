@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @user.location %>
+</p>
+
+<p>
+  <strong>Primary_Care:</strong>
+  <%= @user.primary_care %>
+</p>
+
+<p>
+  <strong>Registered Nurse:</strong>
+  <%= @user.registered_nurse %>
+</p>
+
+<p>
+  <strong>State Loan Repayment :</strong>
+  <%= @user.state_loan_repayment %>
+</p>
+
+<p>
+	<strong>NHSC Loan Repayment : </strong>
+	<% @user.NHSC_loan_repayment %> 
+</p> 
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

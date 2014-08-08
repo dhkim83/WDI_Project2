@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Option:</strong>
+  <%= @name.option %>
+</p>
+
+<p>
+  <strong>Branch of medicine:</strong>
+  <%= @name.branch_of_medicine %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= @name.review %>
+</p>
+
+<p>
+  <strong>Doc preference:</strong>
+  <%= @name.doc_preference %>
+</p>
+
+<%= link_to 'Edit', edit_name_path(@name) %> |
+<%= link_to 'Back', names_path %>

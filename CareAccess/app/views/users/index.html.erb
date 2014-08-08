@@ -1,0 +1,12 @@
+<h1>Users</h1>
+
+
+<%= @users.each do |u| %> 
+<%= u.name %> 
+
+<%= u.field %> 
+<br>
+
+<%= link_to "create your account", new_users.path(u) %>
+
+<% end %> 

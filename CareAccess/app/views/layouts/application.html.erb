@@ -17,26 +17,43 @@
 <% end %> 
 
 
-<h1>Selections </h1>
+<h1>Hospital Selections</h1>
 <p>
 
-<%= link_to "By Primary_Care only", selections_path(selectionfilter:"primary") %>
-<%= link_to "By Registered_Nurse only", selections_path(selectionfilter:"nurse") %> 
-<%= link_to "By Location only", selections_path(selectionfilter:"location") %>
-<%= link_to "By State_Loan_Repayment_only", selections_path(selectionfilter:"benefit") %>
-<%= link_to "By NHSC_Loan_Repayment_only", selections_path(selectionfilter:"NHSC") %>
-<%= link_to "Show All",          selections_path(selectionfilter:"showall") %>
+<%= link_to "By Primary_Care only", hospitals_path(hospitalfilter:"primary_care") %>
+<%= link_to "By Registered_Nurse only", hospitals_path(hospitalfilter:"registered_nurse") %> 
+<%= link_to "By Location only", hospitals_path(hospitalfilter:"location") %>
+<%= link_to "By State_Loan_Repayment_only", hospitals_path(hospitalfilter:"state_loan_repayment") %>
+<%= link_to "By NHSC_Loan_Repayment_only",hospitals_path(hospitalfilter:"NHSC_loan_repayment") %>
+<%= link_to "Show All",          hospitals_path(hospitalfilter:"showall") %>
   <br>
 </p>
   <ul>
-<% @selections.each do |s| %>
+<% @hospitals.each do |s| %>
   <li>
-    <strong> <%= s.selection %> </strong> -- 
-    (<%= s.selection %>) -- 
-    <i><%= link_to "click for selection", selection_path(s) %></i>
+    <strong> <%= h.hospital %> </strong> 
+    (<%= h.hospital %>) 
+    <%= link_to "select", hospital_path(h) %>
   </li>
   <% end %>
 </ul>
+
+
+
+
+<h1>California State Primary Care Office</h1>
+
+<p>California Healthcare Workforce Development Division 
+Office of Statewide Health Planning & Development
+400 R Street, Suite 330
+Sacramento, CA 95811
+Fax (916) 322-2588
+Phone:  See individual contacts
+PCO Director: Lupe Alonzo-Diaz – (916) 326-3700
+HPSA Contact: Hovik Khosrovian – (916) 326-3734
+NHSC Contact: Hovik Khosrovian – (916) 326-3734</p>
+
+
 
 
 <%= yield %>

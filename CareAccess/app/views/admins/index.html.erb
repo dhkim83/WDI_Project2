@@ -1,0 +1,40 @@
+<h1>Gov Management</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unfilled location</th>
+      <th>Primary Care</th>
+      <th>Registered Nurse</th>
+      <th>State_Loan_Repayment</th>
+      <th>NHSC_Loan_Repayment</th> 
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @govs.each do |gov| %>
+      <tr>
+        <td><%= gov.unfilled_location %></td>
+        <td><%= gov.filled_location %></td> 
+
+        
+        <td><%= gov.primary_care %></td>
+        <td><%= gov.registered_nurse %></td>
+        <td><%= gov.state_loan_repayment %></td>
+        <td><%= gov.NHSC_loan_repayment %></td>
+        <td><%= link_to 'Show', gov %></td>
+        <td><%= link_to 'Sign in to your account' %></td> 
+        <td><%= link_to 'Edit', edit_gov_path(gov) %></td>
+        <td><%= link_to 'Destroy', gov, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gov', new_gov_path %>
+
+
+<% end %> 

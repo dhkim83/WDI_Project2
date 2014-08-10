@@ -1,0 +1,15 @@
+<h1><%= @hospital.name %></h1>
+
+<p>The list of hospitals can be sorted by <%= @hospital.name %>, <%= @hospital.location %>, <%= @hospital.practice_field %>, and <%= @hospital.benefit %>. </p>
+
+<%= link_to "Add new hospital", new_hospital_path(@hospital) %><br>
+
+<%= link_to "Delete", :hospital, method: :delete, data: { confirm: "Are you sure you want to delete #{@hospital.name}?"} %>
+
+<%= link_to "Back to the list!", hospitals_path %>
+
+
+
+
+
+

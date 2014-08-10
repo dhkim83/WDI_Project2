@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resource :session, only:[:new, :session_path, :destroy]
-  resource :selection, only:[:selection_path]
-  resources :govs 
+  resources :hospitals
 
 
 

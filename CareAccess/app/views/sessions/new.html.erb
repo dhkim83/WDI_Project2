@@ -2,9 +2,9 @@
 
 <%= form_for @user, {url: session_path} do |f| %>
 	
-	<%= f.text_field :email, placeholder: "your super secret email address..  we will be spamming.." %><br />
+	<%= f.text_field :email, placeholder: "enter your email" %><br />
 
-	<%= f.password_field :password, placeholder: "password ..." %><br />
+	<%= f.password_field :password, placeholder: "enter your password" %><br />
 	
 
 	<%= f.submit "Log in" %>

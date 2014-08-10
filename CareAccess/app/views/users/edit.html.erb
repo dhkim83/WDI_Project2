@@ -1,0 +1,14 @@
+<h1>Edit your Account</h1>
+
+<%= form_for @user do |f| %>
+	Name <%= f.text_field :name, placeholder: "edit your user name" %><br />
+	Email <%= f.text_field :email, placeholder: "edit your email address" %><br />
+
+	<%= f.password_field :password, placeholder: "your password" %><br />
+	<%= f.password_field :password_confirmation, placeholder: "re-enter your password" %>
+
+	<%= f.submit "Edit your Account", class: "btn btn-success" %>
+
+<% end %>
+
+<%= link_to "Back to the List!", users_path %>

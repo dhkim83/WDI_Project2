@@ -11,6 +11,11 @@ def current_user
 	end 
 
 
+def authorize
+   redirect_to user_path, alert: "You are not authorized" if current_user == nil 
+
+  
+  end
 
 end 
 

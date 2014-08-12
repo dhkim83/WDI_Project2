@@ -1,27 +1,32 @@
  class HospitalsController < ApplicationController
   
   def index
-  my_hospital_filter = params[:hospitalfilter]
-  case my_hospital_filter
-  when "showall"
-  @hospitals = Hospital.all
-when "name"
-  @hospitals =Hospital.where(:name => "name")
-  when "location"
-  @hospitals = Hospital.where(:location =>"location")
-  when "primary_care"
-  @hospitals = Hospital.where(:practice_field => "primary_care")
-when "registered_nurse"
-  @hospitals = Hospital.where(:practice_field => "registered_nurse")
-when "state"
-  @hospitals = Hospital.where(:benefit => "state")
-when "federal"
-  @hospitals =Hospital.where(:benefit => "federal")
-    else
-  @hospitals =Hospital.all
+    @hospitals = Hospital.all
   end 
 
-  end
+
+
+#   my_hospital_filter = params[:hospitalfilter]
+#   case my_hospital_filter
+#   when "showall"
+#   @hospitals = Hospital.all
+# when "name"
+#   @hospitals =Hospital.where(:name => "name")
+#   when "location"
+#   @hospitals = Hospital.where(:location =>"location")
+#   when "primary_care"
+#   @hospitals = Hospital.where(:practice_field => "primary_care")
+# when "registered_nurse"
+#   @hospitals = Hospital.where(:practice_field => "registered_nurse")
+# when "state"
+#   @hospitals = Hospital.where(:benefit => "state")
+# when "federal"
+#   @hospitals =Hospital.where(:benefit => "federal")
+#     else
+#   @hospitals =Hospital.all
+#   end 
+
+#   end
 
   def show
     @hospital = Hospital.find(params[:id]) 
@@ -38,6 +43,7 @@ when "federal"
     else
       render 'new'
     end
+  end
 
   def edit
     @hospital = Hospital.find(params[:id])
@@ -62,8 +68,8 @@ when "federal"
   end
 
   def hospital_params
-    params.require(:hospital).permit(:name, :practice_field, :location, :benefit)) 
+    params.require(:hospital).permit(:name, :practice_field, :location, :benefit)
 
   end
+end 
 
-end

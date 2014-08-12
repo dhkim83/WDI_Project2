@@ -7,7 +7,8 @@ class User
   field :email, type: String
   field :password_digest, type: String 
 
-  has secure_password
+  has_secure_password
+  has_many :hospitals
 end	
 
 

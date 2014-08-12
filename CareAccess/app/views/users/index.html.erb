@@ -1,14 +1,18 @@
+<div class= "user">
 <h1>Users</h1>
 
-
+<ul>
 <%= @users.each do |u| %> 
-<%= u.name %> 
+<li>
 
-<%= u.field %> 
-<br>
+Name: <%= u.name %><br />
+
+Email: <%= u.email %><br />
+
+</li>
 
 <%= link_to "Create your Account", new_users.path(u) %>
 
 <% end %> 
-
+</ul>
 

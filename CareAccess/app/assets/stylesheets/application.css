@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+
+ body {
+	background-color: #73A2AB;
+	color: white;
+}
+
+.wrap {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.navbar {
+	background-color: #74AA7C;
+}
+
+ 
+ .content { margin-top: 60px; 
+ 	
+ }
+
+
+
+
+

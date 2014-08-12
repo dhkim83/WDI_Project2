@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :users
+  
   resource :session, only:[:new, :session_path, :destroy]
   resources :hospitals
 
 
 
+# root :to => 'simple_website#home'
 
 
 #   root 'hello#index'

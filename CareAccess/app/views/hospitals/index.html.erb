@@ -1,22 +1,54 @@
 <h1>Hospital List</h1>
 <p>
-	<%= link_to "By Hospital Name Only". hospitals_path(hospitalfilter:"name") %>
+	<%= link_to "By Hospital Name Only", hospitals_path(hospitalfilter:"name") %>
   <%= link_to "By City Only", hospitals_path(hospitalfilter:"location") %>
 <%= link_to "By Primary Care Only", hospitals_path(hospitalfilter:"primary_care")%>
 <%= link_to "By Registered Nurse Only", hospitals_path(hospitalfilter:"registered_nurse")%>
 <%= link_to "By State Gov Benefit Only", hospitals_path(hospitalfilter:"state") %>
 <%= link_to "By Federal Gov Benefit Only", hospitals_path(hospitalfilter:"federal")%>
-  <%= link_to "Show All",          hospitals_path(hospitalfilter:"showall") %>
+  
   <br>
 </p>
+
   <ul>
 <% @hospitals.each do |h| %>
   <li>
-    <strong> <%= h.name %> </strong> -- 
-    (<%= h.location %>) -- 
-    <i><%= link_to "click for hospital location information", hospital_path(h) %></i>
+    <strong> <%= h.name %> </strong> 
+    (<%= h.name %>) 
+    <%= link_to "click for the hospital information through name", hospital_path(h) %>
   </li>
   <% end %>
 </ul>
 
 
+<!-- <ul>
+	<% @hospitals.each do |h| %>
+	<li>
+		<strong> <%= h.location %> </strong>
+		(<%= h.location %>)
+		<%= link_to "click for the hospital information through location", hospital_path(h) %>
+	</li>
+	<% end %>
+</ul>
+
+<ul>
+	<% @hospitals.each do |h| %>
+	<li>
+		<strong> <%= h.practice_field %> </strong>
+		(<%= h.practice_field %>)
+		<%= link_to "click for the hospital information through practice field", hospital_path(h) %>
+	</li>
+	<% end %>
+</ul>
+
+<ul>
+	<% @hospitals.each do |h| %>
+	<li>
+		<strong> <%= h.benefit %> </strong>
+		(<%= h.benefit %>)
+		<%= link_to "click for the hospital information through benefit option", hospital_path(h) %> 
+	</li>
+	<% end %>
+</ul> 
+
+ -->

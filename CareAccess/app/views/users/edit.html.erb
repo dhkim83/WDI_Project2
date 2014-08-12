@@ -1,6 +1,7 @@
 <h1>Edit your Account</h1>
 
 <%= form_for @user do |f| %>
+<div class = "edit">
 	Name <%= f.text_field :name, placeholder: "edit your user name" %><br />
 	Email <%= f.text_field :email, placeholder: "edit your email address" %><br />
 
@@ -8,7 +9,9 @@
 	<%= f.password_field :password_confirmation, placeholder: "re-enter your password" %>
 
 	<%= f.submit "Edit your Account", class: "btn btn-success" %>
-
+</div>
 <% end %>
+
+<%= link_to 'Delete Account', @user, method: :delete, data: { confirm: "Do you want to delete your account?" } %>
 
 <%= link_to "Back to the List!", users_path %>

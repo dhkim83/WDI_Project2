@@ -1,3 +1,5 @@
+<div class="container">
+
 <h1>Sign up for our site!</h1>
 
 <%= form_for @user do |f| %>
@@ -10,6 +12,7 @@
 	<%= f.submit "Create your Account", class: "btn btn-success" %>
 
 <% end %>
+</div>
 
 <%= link_to "Back to the List!", users_path %>
 

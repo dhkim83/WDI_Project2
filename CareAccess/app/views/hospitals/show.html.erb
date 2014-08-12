@@ -1,6 +1,9 @@
 <h1><%= @hospital.name %></h1>
+<h1><%= @hospital.practice_field %></h1>
+<h1><%= @hospital.location %></h1>
+<h1><%= @hospital.benefit %></h1> 
 
-<p>The list of hospitals can be sorted by <%= @hospital.name %>, <%= @hospital.location %>, <%= @hospital.practice_field %>, and <%= @hospital.benefit %>. </p>
+<p>The list of hospital you have chosen is <%= @hospital.name %>, and in the city of <%= @hospital.location %>, practice field is <%= @hospital.practice_field %>, and the available government benefit is <%= @hospital.benefit %> option. </p>
 
 <%= link_to "Add new hospital", new_hospital_path(@hospital) %><br>
 

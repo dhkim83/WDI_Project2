@@ -1,32 +1,43 @@
  class HospitalsController < ApplicationController
   
-  def index
-    @hospitals = Hospital.all
+  # def index
+  #   @hospitals = Hospital.all
+  # end 
+
+def index
+
+
+  my_hospital_filter = params[:hospitalfilter]
+  case my_hospital_filter
+  when "showall"
+  @hospitals = Hospital.all
+
+when "name"
+  @hospitals =Hospital.where(:name => "name")
+  # @hospitals = Hospital.all.group_by {|h| h.name[0]}
+# Need to fix this part... alphabetically order 
+  
+when "location"
+  @hospitals = Hospital.where(:name => "location")
+  # Need to fix this part... alphabetically order 
+
+when "primary_care"
+  @hospitals = Hospital.where(:practice_field => "primary_care")
+
+when "registered_nurse"
+  @hospitals = Hospital.where(:practice_field => "registered_nurse")
+
+when "state"
+  @hospitals = Hospital.where(:benefit => "state")
+
+when "federal"
+  @hospitals =Hospital.where(:benefit => "federal")
+
+    else
+  @hospitals =Hospital.all
   end 
 
-
-
-#   my_hospital_filter = params[:hospitalfilter]
-#   case my_hospital_filter
-#   when "showall"
-#   @hospitals = Hospital.all
-# when "name"
-#   @hospitals =Hospital.where(:name => "name")
-#   when "location"
-#   @hospitals = Hospital.where(:location =>"location")
-#   when "primary_care"
-#   @hospitals = Hospital.where(:practice_field => "primary_care")
-# when "registered_nurse"
-#   @hospitals = Hospital.where(:practice_field => "registered_nurse")
-# when "state"
-#   @hospitals = Hospital.where(:benefit => "state")
-# when "federal"
-#   @hospitals =Hospital.where(:benefit => "federal")
-#     else
-#   @hospitals =Hospital.all
-#   end 
-
-#   end
+  end
 
   def show
     @hospital = Hospital.find(params[:id]) 
@@ -72,4 +83,55 @@
 
   end
 end 
+
+# when "arleta"
+#   @hospitals = Hospital.where(:location => "arleta")
+
+# when "pacoima"
+#   @hospitals = Hospital.where(:location => "pacoima")
+
+# when "san fernando"
+#   @hospitals = Hospital.where(:location => "san fernando")
+
+# when "bell"
+#   @hospitals = Hospital.where(:location => "bell")
+
+# when "val verde"
+#   @hospitals = Hospital.where(:location => "val verde")
+
+# when "el monte"
+#   @hospitals = Hospital.where(:location => "el monte")
+
+# when "los angeles"
+#   @hospitals = Hospital.where(:location => "los angeles")
+
+# when "hungtington park"
+#   @hospitals = Hospital.where(:location => "hungtington park")
+
+# when "hollywood"
+#   @hospitals = Hospital.where(:location => "hollywood")
+
+# when "long beach"
+#   @hospitals = Hospital.where(:location => "long beach")
+
+# when "north hollywood"
+#   @hospitals = Hospital.where(:location => "north hollywood")
+
+# when "sun valley"
+#   @hospitals = Hospital.where(:location => "sun valley")
+
+# when "pico rivera"
+#   @hospitals = Hospital.where(:location => "pico rivera")
+
+# when "pomona"
+#   @hospitals = Hospital.where(:location => "pomona")
+
+# when "venice"
+#   @hospitals = Hospital.where(:location => "venice")
+
+# when "santa monica"
+#   @hospitals = Hospital.where(:location => "santa monica")
+
+# when "culver city"
+#   @hospitals = Hospital.where(:location => "culver city")
 

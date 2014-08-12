@@ -8,17 +8,17 @@
 Hospital = Hospital.create ([
 
 	#Arleta/Pacoima West/Panorama City/San Fernando West
-	{name:"El Proyecto Del Barrio, Inc", practice_field: "primary_care", location:"Arleta", benefit: "state" },
-	{name:"Mission City Community Network Pacoima Middle School Based Clinic", practice_field:"primary_care" , location:"Pacoima", benefit: "federal"},
+	{name:"El Proyecto Del Barrio, Inc", practice_field: "primary_care", location: "Arleta", benefit: "state" },
+	{name:"Mission City Community Network Pacoima Middle School Based Clinic", practice_field:"primary_care" , location: "Pacoima", benefit: "federal"},
 	{name:"Northeast Valley Health Corporation", practice_field: "registered_nurse" , location: "San Fernando" , benefit: "state" },
 
 	#Bell Northeast/Bell Gardens/Commerce/Maywood/Montebello South
-	{name:"Bell Gardens Community Health Center", practice_field: "registered_nurse", location:"Bell Gardens", benefit: "state" },
-	{name: "Bell Gardens Family Medical Center", practice_field:"primary_care" , location:"Bell Gardens", benefit: "federal" },
+	{name:"Bell Gardens Community Health Center", practice_field: "registered_nurse", location:"Bell", benefit: "state" },
+	{name: "Bell Gardens Family Medical Center", practice_field:"primary_care" , location:"Bell", benefit: "federal" },
 
 	#Bell Southwest/Cudahy/Vernon
-	{name:"Altamed Medical Group, Bell", practice_field: "primary_care" , location: "Bell" , benefit: "state"},
-	{name:"Northeast Community Clinic-Bell", practice_field: "registered_nurse", location:"Bell", benefit:"state" },
+	{name:"Altamed Medical Group, Bell", practice_field: "primary_care" , location: "Bell", benefit: "state"},
+	{name:"Northeast Community Clinic-Bell", practice_field: "registered_nurse", location: "Bell", benefit:"state" },
 
 
 #Castaic/Val Verde

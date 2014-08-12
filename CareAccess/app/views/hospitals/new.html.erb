@@ -2,9 +2,9 @@
 
 <%= form_for @hospital do |f| %>
 	Name: <%= f.text_field :name, placeholder: "Name" %>
-	<%= f.text_field :practice_field, placeholder: "Practice Field"%>
-	<%= f.text_field :location, placeholder: "Location" %>
-	<%= f.text_field :benefit, placeholder: "Benefit" %>
+	Practice_field: <%= f.text_field :practice_field, placeholder: "Practice Field"%>
+	Location: <%= f.text_field :location, placeholder: "Location" %>
+	Benefit: <%= f.text_field :benefit, placeholder: "Benefit" %>
 
 	<%= f.submit "Add a new hospital on the list" %>
 

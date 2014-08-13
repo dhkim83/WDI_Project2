@@ -1,12 +1,12 @@
 <h1> Add a new hospital on the list </h1>
 
 <%= form_for @hospital do |f| %>
-	Name: <%= f.text_field :name, placeholder: "Name" %>
-	Practice_field: <%= f.text_field :practice_field, placeholder: "Practice Field"%>
-	Location: <%= f.text_field :location, placeholder: "Location" %>
-	Benefit: <%= f.text_field :benefit, placeholder: "Benefit" %>
+	Name: <%= f.text_field :name, placeholder: "name" %>
+	Practice_field: <%= f.text_field :practice_field, placeholder: "practice_field"%>
+	Location: <%= f.text_field :location, placeholder: "location" %>
+	Benefit: <%= f.text_field :benefit, placeholder: "benefit" %>
 
-	<%= f.submit "Add a new hospital on the list" %>
+	<%= f.submit "Add this hospital on your list" %>
 
 <% end %>
 

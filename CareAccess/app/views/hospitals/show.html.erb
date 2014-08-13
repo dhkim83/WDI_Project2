@@ -5,9 +5,10 @@
 
 <p>The list of hospital you have chosen is <%= @hospital.name %>, and in the city of <%= @hospital.location %>, practice field is <%= @hospital.practice_field %>, and the available government benefit is <%= @hospital.benefit %> option. </p>
 
-<%= link_to "Add new hospital", new_hospital_path(@hospital) %><br>
+<%= link_to "Add this hospital on your list", new_hospital_path(@hospital) %><br>
 
 <%= link_to "Delete", :hospital, method: :delete, data: { confirm: "Are you sure you want to delete #{@hospital.name}?"} %>
+
 
 <%= link_to "Back to the list!", hospitals_path %>
 

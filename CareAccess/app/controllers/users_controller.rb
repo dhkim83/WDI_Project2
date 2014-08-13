@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 
 
@@ -30,11 +30,15 @@ class UsersController < ApplicationController
     def create
       @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
       if @user.save
+        @current_user = @user
+        session[:user_id] = @user.id
         redirect_to users_path
       else
         render 'new'
       end
     end
+
+    
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -54,23 +58,23 @@ class UsersController < ApplicationController
   # DELETE /users/1.json
   
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+  # private
+  #   # Use callbacks to share common setup or constraints between actions.
+  #   def set_user
+  #     @user = User.find(params[:id])
+  #   end
 
-  def destroy
-        @user = User.find(params[:id])
-        @user.is_active = false
-        @user.save
-        redirect_to users_path
-    end
+  # def destroy
+  #       @user = User.find(params[:id])
+  #       @user.is_active = false
+  #       @user.save
+  #       redirect_to users_path
+  #   end
 
-    def reactivate 
-      @user =User.find(params[:id])
-      # @user.is_active = true 
-    end   
+  #   def reactivate 
+  #     @user =User.find(params[:id])
+  #     # @user.is_active = true 
+  #   end   
 
 
 end 

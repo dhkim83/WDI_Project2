@@ -1,11 +1,12 @@
  class HospitalsController < ApplicationController
+
   
   # def index
-  #   @hospitals = Hospital.all
+  #   @hospitals = Hospital.order ("hospital_name")
   # end 
 
 def index
-
+# @hospitals = Hospital.order("location", "name")
 
   my_hospital_filter = params[:hospitalfilter]
   case my_hospital_filter
@@ -14,13 +15,13 @@ def index
 
 when "name"
   @hospitals =Hospital.where(:name => "name")
-  # @hospitals = Hospital.all.group_by {|h| h.name[0]}
-# Need to fix this part... alphabetically order 
+  @hospitals = Hospital.all.sort_by {|h| h.name[0]}
+
   
 when "location"
   @hospitals = Hospital.where(:name => "location")
-  # Need to fix this part... alphabetically order 
-
+  @hospitals = Hospital.all.sort_by {|l| l.location[0]}
+  
 when "primary_care"
   @hospitals = Hospital.where(:practice_field => "primary_care")
 
@@ -34,7 +35,7 @@ when "federal"
   @hospitals =Hospital.where(:benefit => "federal")
 
     else
-  @hospitals =Hospital.all
+  @hospitals = Hospital.all
   end 
 
   end

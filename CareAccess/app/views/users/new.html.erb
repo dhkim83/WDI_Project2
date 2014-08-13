@@ -1,6 +1,5 @@
-<div class="container">
-
 <h1>Sign up for our site!</h1>
+
 
 <%= form_for @user do |f| %>
 	Name <%= f.text_field :name, placeholder: "create your user name" %><br />
@@ -9,12 +8,10 @@
 	<%= f.password_field :password, placeholder: "create a password" %><br />
 	<%= f.password_field :password_confirmation, placeholder: "re-enter a password" %>
 
-	<%= f.submit "Create your Account", class: "btn btn-success" %>
+	<%= f.submit "Create your Account", class: "btn btn-primary btn-large" %>
 
 <% end %>
-</div>
 
-<%= link_to "Back to the List!", users_path %>
-
+<%= link_to "Go back to the main page!", users_path %>
 
 

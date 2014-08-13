@@ -1,18 +1,16 @@
-<div class= "user">
-<h1>Users</h1>
+<h1>Manage your Account</h1>
+<p>Welcome! Click 'Edit' button to manage your account</p>
 
-<ul>
-<%= @users.each do |u| %> 
-<li>
+<% @users.each do |u| %>
+			
+    [<%= u.name %>]
+    [<%= u.email %>]
+    <%= link_to "Edit", edit_user_path(u) %>
 
-Name: <%= u.name %><br />
+<% end %>
 
-Email: <%= u.email %><br />
 
-</li>
 
-<%= link_to "Create your Account", new_users.path(u) %>
 
-<% end %> 
-</ul>
 
+	

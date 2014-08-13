@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   
-  resource :session, only:[:new, :session_path, :destroy]
+  resource :session, only:[:new, :create, :session_path, :destroy]
   resources :hospitals
 
 

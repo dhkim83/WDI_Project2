@@ -9,6 +9,12 @@ class User
 
   has_secure_password
   has_many :hospitals
-end	
 
+
+# validates :name, presence: true
+
+#   validates :email, presence: true
+#   validates_uniqueness_of :email
+
+end 
 

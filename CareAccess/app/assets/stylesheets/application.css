@@ -20,6 +20,10 @@
 	color: white;
 }
 
+h1 {
+	color: black;
+}
+
 .wrap {
 	width: 800px;
 	margin: 0 auto;
@@ -30,7 +34,8 @@
 }
 
  
- .content { margin-top: 60px; 
+ .content { 
+ 	margin-top: 60px; 
  	
  }
 

@@ -10,28 +10,28 @@ Hospital = Hospital.create ([
 	#Arleta/Pacoima West/Panorama City/San Fernando West
 	{name:"El Proyecto Del Barrio, Inc", practice_field: "primary_care", location: "Arleta", benefit: "state" },
 	{name:"Mission City Community Network Pacoima Middle School Based Clinic", practice_field:"primary_care" , location: "Pacoima", benefit: "federal"},
-	{name:"Northeast Valley Health Corporation", practice_field: "registered_nurse" , location: "San Fernando" , benefit: "state" },
+	{name:"Northeast Valley Health Corporation", practice_field: "registered_nurse" , location: "San Fernando" , benefit: "state"},
 
 	#Bell Northeast/Bell Gardens/Commerce/Maywood/Montebello South
-	{name:"Bell Gardens Community Health Center", practice_field: "registered_nurse", location:"Bell", benefit: "state" },
+	{name:"Bell Gardens Community Health Center", practice_field: "registered_nurse", location:"Bell", benefit: "state"},
 	{name: "Bell Gardens Family Medical Center", practice_field:"primary_care" , location:"Bell", benefit: "federal" },
 
 	#Bell Southwest/Cudahy/Vernon
 	{name:"Altamed Medical Group, Bell", practice_field: "primary_care" , location: "Bell", benefit: "state"},
-	{name:"Northeast Community Clinic-Bell", practice_field: "registered_nurse", location: "Bell", benefit:"state" },
+	{name:"Northeast Community Clinic-Bell", practice_field: "registered_nurse", location: "Bell", benefit:"state"},
 
 
 #Castaic/Val Verde
 
-	{name:"Samuel Dixon Family Health Center, Inc.", practice_field:"primary_care" , location:"Val Verde", benefit:"state"  },
+	{name:"Samuel Dixon Family Health Center, Inc.", practice_field:"primary_care" , location:"Val Verde", benefit:"state"},
 
 #El Monte/Five Points
 
 	{name:"Altamed Medical Group", practice_field: "primary_care" , location: "El Monte" , benefit: "federal"},
-	{name:"Altamed Senior Buenacare El Monte", practice_field: "registered_nurse", location:"El Monte", benefit: "federal"  },
-	{name:"Cleaver Family Wellness Clinic", practice_field:"primary_care" , location:"El Monte", benefit: "federal" },
+	{name:"Altamed Senior Buenacare El Monte", practice_field: "", location:"El Monte", benefit: "federal" },
+	{name:"Cleaver Family Wellness Clinic", practice_field:"primary_care" , location:"El Monte", benefit: "federal"},
 	{name:"Planned Parenthood Los Angeles-El Monte Center", practice_field: "primary_care" , location: "El Monte" , benefit: "federal"},
-	{name:"Southern California Medical Center, Inc.", practice_field: "registered_nurse" , location: "El Monte" , benefit: "sate" },
+	{name:"Southern California Medical Center, Inc.", practice_field: "registered_nurse" , location: "El Monte" , benefit: "state"},
 
 
 
@@ -39,10 +39,10 @@ Hospital = Hospital.create ([
 #El Sereno North/Highland Park/Montecito Heights/Monterey Hills
 
 	{name:"Arroyo Vista Family Health Center", practice_field: "primary_care", location:"Los Angeles", benefit: "state" },
-	{name:"Comprehensive Community Health Ctr., Inc", practice_field:"primary_care" , location:"Los Angeles", benefit: "federal" },
+	{name:"Comprehensive Community Health Ctr., Inc", practice_field:"primary_care" , location:"Los Angeles", benefit: "federal"},
 	{name:"Northeast Community Clinic", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
 	{name:"Northeast Community Clinic Women'S Health Center", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
-	{name:"Northeast Community Clinic-Mobil Medical Van", practice_field: "registered_nurse", location:"Los Angeles", benefit:"state"  },
+	{name:"Northeast Community Clinic-Mobil Medical Van", practice_field: "registered_nurse", location:"Los Angeles", benefit:"state" },
 	{name:"St. John'S Well Child And Fam Center-Lincoln.", practice_field:"registered_nurse" , location:"Los Angeles", benefit: "federal" },
 
 
@@ -51,30 +51,30 @@ Hospital = Hospital.create ([
 	{name:"Central Neighborhood Health Foundation", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
 	{name:"Planned Parenthood Of Los Angeles S. Mark Taper Foundation Center", practice_field: "primary_care" , location: "Los Angeles" , benefit:"federal" },
 	{name:"S. Mark Taper Foundation Health Clinic", practice_field: "registered_nurse" , location: "Los Angeles" , benefit: "state"},
-	{name:"St. John'S Well Child And Family Center", practice_field: "registered_nurse", location:"Los Angeles", benefit:"federal"  },
-	{name:"T.H.E. Clinic At Ruth Temple Health Center", practice_field:"registered_nurse" , location:"Los Angeles", benefit:"federal"  },
+	{name:"St. John'S Well Child And Family Center", practice_field: "registered_nurse", location:"Los Angeles", benefit:"federal" },
+	{name:"T.H.E. Clinic At Ruth Temple Health Center", practice_field:"registered_nurse" , location:"Los Angeles", benefit:"federal" },
 	{name:"USC-University Park Health Center", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
 
 #Firestone/Florence South
 
 	{name:"Huntington Park Family Health Center", practice_field: "primary_care" , location: "Huntington Park" , benefit:"state" },
-	{name:"Planned Parenthood Los Angeles-Dorothy Hecht Health Center", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
+	{name:"Planned Parenthood Los Angeles-Dorothy Hecht Health Center", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state"},
 
 
 #Hollywood South Central/Inner Sunset
 	{name:"Ahf Healthcare Center - Hollywood", practice_field: "registered_nurse" , location: "Los Angeles" , benefit: "federal"},
-	{name:"Altamed Medical Group At Childrens Hosp. L.A.", practice_field: "primary_care", location:"Los Angeles", benefit: "federal" },
-	{name:"Jeffery Goodman Special Care Clinic", practice_field:"registered_nurse" , location:"Los Angeles", benefit:"federal"  },
+	{name:"Altamed Medical Group At Childrens Hosp. L.A.", practice_field: "primary_care", location:"Los Angeles", benefit: "federal"},
+	{name:"Jeffery Goodman Special Care Clinic", practice_field:"registered_nurse" , location:"Los Angeles", benefit:"federal" },
 	{name:"Jwch Medical Clinic", practice_field: "primary_care" , location: "Los Angeles" , benefit: "state"},
 	{name:"Mission City Community Network-Hollywood", practice_field: "registered_nurse" , location: "Los Angeles" , benefit:"state" },
-	{name:"Planned Parenthood Los Angeles- Hollywood Center", practice_field: "primary_care", location:"Los Angeles", benefit: "federal" },
+	{name:"Planned Parenthood Los Angeles- Hollywood Center", practice_field: "primary_care", location:"Los Angeles", benefit: "federal"},
 	{name:"Queenscare Family Clinics - Mobile Dental V", practice_field:"primary_care" , location:"Los Angeles", benefit: "state"},
 	{name:"Queenscare Family Clinic-Hollywood", practice_field: "primary_care" , location: "Los Angeles" , benefit:"state" },
 	{name:"St. Anthony Medical Center/Hollywood Clinic", practice_field: "registered_nurse" , location: "Hollywood" , benefit:"state" },
-	{name:"The Saban Free Clinic - Hollywood Wilshire Health Center", practice_field: "registered_nurse", location:"Los Angeles", benefit:"federal"  },
+	{name:"The Saban Free Clinic - Hollywood Wilshire Health Center", practice_field: "registered_nurse", location:"Los Angeles", benefit:"federal"},
 	
 	#Long Beach West Central
-	{name:"The Children's Clinic Family Health Center at Cesar Chavez Elementary School", practice_field:"Primary_care" , location:"Long Beach", benefit:"federal"  },
+	{name:"The Children's Clinic Family Health Center at Cesar Chavez Elementary School", practice_field:"primary_care" , location:"Long Beach", benefit:"federal" },
 	{name:"Vasek Polak Children'S Clinic Fam. Hlth Ctr", practice_field: "primary_care" , location: "Long Beach" , benefit:"state" },
 
 
@@ -82,7 +82,8 @@ Hospital = Hospital.create ([
 	#Mar Vista/Ocean Park/Santa Monica South/Venice
 	{name:"Wise And Healthy Aging", practice_field: "registered_nurse"  , location:"Santa Monica", benefit: "state"},
 	{name:"Westside Family Health Center", practice_field: "registered_nurse" , location:"Santa Monica", benefit:"federal" },
-	{name:"Venice Medical And Mental Health Services", practice_field: "primary_care" , location:"Venice", benefit: "state" },
+	{name:"Venice Medical And Mental Health Services", practice_field: "primary_care" , location:"Venice", benefit: "state
+		" },
 	{name:"Venice Family Clinic - Robert Levine Family Health Center", practice_field: "primary_care", location:"Venice" , benefit: "federal"},
 	{name:"Venice Family Clinic - Colen Family Health Center", practice_field: "primary_care" , location:"Culver City" , benefit:"federal" },
 	{name:"Venice Family Clinic", practice_field: "primary_care" , location:"Venice" , benefit:"state" },

@@ -8,11 +8,15 @@
 	<%= f.password_field :password, placeholder: "your password" %><br />
 	<%= f.password_field :password_confirmation, placeholder: "re-enter your password" %>
 
-	<%= f.submit "Edit your Account", class: "btn btn-primary btn-large" %>
+	
+
+	<%= f.submit "Edit Account", class: "btn btn-primary btn-large" %>
 
 <% end %>
 
 
+
+<%= link_to 'Go to your saved list', users_path %>
 <%= link_to 'Go back to the main page!', users_path %>
 
 

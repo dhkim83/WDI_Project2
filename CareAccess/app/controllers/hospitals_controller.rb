@@ -1,6 +1,8 @@
  class HospitalsController < ApplicationController
+before_action :check_user, only: [:new, :create, :edit, :update, :destroy]
 
-  
+
+
   # def index
   #   @hospitals = Hospital.order ("hospital_name")
   # end 
@@ -15,12 +17,12 @@ def index
 
 when "name"
   @hospitals =Hospital.where(:name => "name")
-  @hospitals = Hospital.all.sort_by {|h| h.name[0]}
-
+  @hospitals = Hospital.all.order("name ASC")
+  
   
 when "location"
-  @hospitals = Hospital.where(:name => "location")
-  @hospitals = Hospital.all.sort_by {|l| l.location[0]}
+  @hospitals = Hospital.where(:location => "location")
+  @hospitals = Hospital.all.order("location ASC")
   
 when "primary_care"
   @hospitals = Hospital.where(:practice_field => "primary_care")
@@ -83,56 +85,13 @@ when "federal"
     params.require(:hospital).permit(:name, :practice_field, :location, :benefit)
 
   end
+
+
+private
+  def check_user
+    if ! current_user 
+      redirect_to new_session_path
+    end 
+  end 
 end 
-
-# when "arleta"
-#   @hospitals = Hospital.where(:location => "arleta")
-
-# when "pacoima"
-#   @hospitals = Hospital.where(:location => "pacoima")
-
-# when "san fernando"
-#   @hospitals = Hospital.where(:location => "san fernando")
-
-# when "bell"
-#   @hospitals = Hospital.where(:location => "bell")
-
-# when "val verde"
-#   @hospitals = Hospital.where(:location => "val verde")
-
-# when "el monte"
-#   @hospitals = Hospital.where(:location => "el monte")
-
-# when "los angeles"
-#   @hospitals = Hospital.where(:location => "los angeles")
-
-# when "hungtington park"
-#   @hospitals = Hospital.where(:location => "hungtington park")
-
-# when "hollywood"
-#   @hospitals = Hospital.where(:location => "hollywood")
-
-# when "long beach"
-#   @hospitals = Hospital.where(:location => "long beach")
-
-# when "north hollywood"
-#   @hospitals = Hospital.where(:location => "north hollywood")
-
-# when "sun valley"
-#   @hospitals = Hospital.where(:location => "sun valley")
-
-# when "pico rivera"
-#   @hospitals = Hospital.where(:location => "pico rivera")
-
-# when "pomona"
-#   @hospitals = Hospital.where(:location => "pomona")
-
-# when "venice"
-#   @hospitals = Hospital.where(:location => "venice")
-
-# when "santa monica"
-#   @hospitals = Hospital.where(:location => "santa monica")
-
-# when "culver city"
-#   @hospitals = Hospital.where(:location => "culver city")
 

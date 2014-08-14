@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 			# indicating that they are logged in
 			
 			session[:user_id] = u.id.to_s
-			redirect_to hospitals_path
+			redirect_to user_path(current_user)
 		
 		else
 			# Go back to the login page 

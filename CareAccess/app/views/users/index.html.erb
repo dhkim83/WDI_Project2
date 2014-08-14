@@ -1,14 +1,20 @@
-<h1>Manage your Account</h1>
-<p>Welcome! Click 'Edit' button to manage your account</p>
+<h1>Welcome to Care Access!</h1>
 
-<% @users.each do |u| %>
-			
-    [<%= u.name %>]
-    [<%= u.email %>]
-    <%= link_to "Edit", edit_user_path(u) %>
+<p>This website is designated to provide better health care providing system in 'Health Care Professional Shortage Areas' in Los Angeles County. Primary Care doctors and Registered Nurses can search available spots for their health care provisions by locations, practice fields, public benefit options. It is highly encouraged to participate in this program for efficient health care provision in Los Angeles County. </P>
+
+
+
+<% if current_user %>
+<%= current_user.name %>
+
+
+<% else %>
+
+<p>In order to access to this site, please click 'Log In' button above</p> 
+
+If you are a new user, please click 'Sign up' button above
 
 <% end %>
-
 
 
 

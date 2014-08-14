@@ -7,7 +7,10 @@ class Hospital
   field :benefit, type: String 
   
   
-  has_many :users 
+  has_many :pairings
+
+  
+  
 
 
   end 

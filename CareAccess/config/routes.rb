@@ -3,8 +3,11 @@ Rails.application.routes.draw do
   
   resource :session, only:[:new, :create, :session_path, :destroy]
   resources :hospitals
+# resources :amin
 
+#get 'pairings/' => 'pairngs#index', as: :pairngs
 
+resources :pairings, only: [:index, :create, :show]
 
 # root :to => 'simple_website#home'
 

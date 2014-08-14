@@ -1,0 +1,33 @@
+<h1>Dude here's a bunch of great-tasting combos:</h1>
+
+<% Pairings.each do |p| %>
+
+	<b><%= p.pastry.name %></b> along with <b><%= p.bean.name %></b><br />
+<% end %>
+
+
+
+
+
+
+
+
+
+<table>
+<tr>
+	<td></td>
+	<% Pastry.all.each do |p| %>
+		<td><%= p.name %></td>
+	<% end %>
+</tr>
+<% Bean.all.each do |b| %>
+	<tr>
+	<td><%= b.name %></td>
+	<% Pastry.all.each do |p| %>
+		<td>
+			<%= b.pairings.where(pastry_id: p.id).first ? "X" : "O" %>
+		</td>
+	<% end %>
+	</tr>
+<% end %>
+</table>

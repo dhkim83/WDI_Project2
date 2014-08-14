@@ -1,4 +1,4 @@
-<h1> Add a new hospital on the list </h1>
+<h1> Save this hospital on your account </h1>
 
 <%= form_for @hospital do |f| %>
 	Name: <%= f.text_field :name, placeholder: "name" %>
@@ -6,7 +6,7 @@
 	Location: <%= f.text_field :location, placeholder: "location" %>
 	Benefit: <%= f.text_field :benefit, placeholder: "benefit" %>
 
-	<%= f.submit "Add this hospital on your list" %>
+	<%= f.submit "Click here to save this hospital on your account" %>
 
 <% end %>
 

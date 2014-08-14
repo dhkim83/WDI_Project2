@@ -8,7 +8,9 @@ class User
   field :password_digest, type: String 
 
   has_secure_password
-  has_many :hospitals
+  # field :is_admin, type: Boolean
+
+	has_many :pairings
 
 
 # validates :name, presence: true

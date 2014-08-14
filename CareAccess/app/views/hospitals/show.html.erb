@@ -3,9 +3,9 @@
 <h1><%= @hospital.location %></h1>
 <h1><%= @hospital.benefit %></h1> 
 
-<p>The list of hospital you have chosen is <%= @hospital.name %>, and in the city of <%= @hospital.location %>, practice field is <%= @hospital.practice_field %>, and the available government benefit is <%= @hospital.benefit %> option. </p>
+<p>The hospital you have chosen is <%= @hospital.name %>, in the city of <%= @hospital.location %>, practice field is <%= @hospital.practice_field %>, and the current available government benefit is <%= @hospital.benefit %> option. </p>
 
-<%= link_to "Add this hospital on your list", new_hospital_path(@hospital) %><br>
+<%= link_to "Save this hospital on your account", pairings_path(hospital_id: @hospital.id),method: :post %><br>
 
 <%= link_to "Delete", :hospital, method: :delete, data: { confirm: "Are you sure you want to delete #{@hospital.name}?"} %>
 

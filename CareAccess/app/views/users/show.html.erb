@@ -7,8 +7,19 @@
   <strong>Email:</strong>
   <h1><%= @user.email %></h1>
 </p>
-<%= link_to "Create new Account", new_user_path(@user) %><br>
-<%= link_to 'Edit', edit_user_path(u) %> <br />
-<%= link_to 'Go back to the main page!', users_path %>
+
+
+
+
+
+
+
+
+<p>If you want to edit your account information, please click 'Edit' button below</p>
+<%= link_to 'Edit Account', edit_user_path(@user) %> <br />
+
+
+
+<%= link_to 'Go back to the main page!', users_path %><br />
 
 

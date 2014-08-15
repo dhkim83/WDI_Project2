@@ -14,7 +14,7 @@
       <% User.all.each do |u| %>
       <td>
         <%#= h.pairings.where(user_id: u.id).first ? "X" : "O" %>
-        <%= check_box_tag "checky_#{h.id}_#{u.id}", "true",
+        <%= check_box_tag "checkbox_#{h.id}_#{u.id}", "true",
           h.pairings.where(user_id: u.id).first %>
       </td>
     <% end %>

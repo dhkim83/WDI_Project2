@@ -2,24 +2,22 @@
 
 <%= form_for @user do |f| %>
 
-	Name <%= f.text_field :name, placeholder: "edit your user name" %><br />
-	Email <%= f.text_field :email, placeholder: "edit your email address" %><br />
+  Name <%= f.text_field :name, placeholder: "edit your user name" %><br />
+  Email <%= f.text_field :email, placeholder: "edit your email address" %><br />
 
-	<%= f.password_field :password, placeholder: "your password" %><br />
-	<%= f.password_field :password_confirmation, placeholder: "re-enter your password" %>
+  <%= f.password_field :password, placeholder: "your password" %><br />
+  <%= f.password_field :password_confirmation, placeholder: "re-enter your password" %>
 
-	
+  
 
-	<%= f.submit "Edit User", class: "btn btn-primary btn-large" %>
+  <%= f.submit "Edit User", class: "btn btn-primary btn-large" %>
 
 <% end %>
 
 
 
-<%= link_to 'Go to your select option page', users_path %>
+<%= link_to 'Go to your Check Box', users_path %>
 <%= link_to 'Go back to the main page', users_path %>
-
-
 
 
 

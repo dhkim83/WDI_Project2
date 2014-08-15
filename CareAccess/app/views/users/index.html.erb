@@ -4,20 +4,16 @@
 
 
 
-<% if ! current_user %> <!-- ====> is not logged in,  -->
-
-<p>In order to access to this site, please click 'Log In' button above</p> 
+<% if current_user %> 
 
 <p>If you are a new user, please click 'Sign up' button above</p>
 
-<% if current_user %> <!-- ======> logged in,  -->
-Welcome <%= current_user.name %>!
+<p>In order to access to this site, please click 'Log In' button above</p> 
 
 
-Click here for the select option. 
-<%= link_to 'Go to the select option page', pairings_path %>
 
 
+<%= link_to 'Check Box', pairings_path %>
 
 
 <% else %>
@@ -26,10 +22,6 @@ Click here for the select option.
 <% end %>
 
 <%= link_to 'Go back to the hospital list', hospitals_path %>
-
-
-
-
 
 
 

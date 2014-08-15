@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
 #get 'pairings/' => 'pairngs#index', as: :pairngs
 
-resources :pairings, only: [:index, :create, :show]
-
+  resources :pairings
 # root :to => 'simple_website#home'
 
 

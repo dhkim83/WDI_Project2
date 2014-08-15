@@ -54,11 +54,31 @@ class UsersController < ApplicationController
 end 
 
 
-#   private
+  # private
 
-#     def user_params
-#       params.require(:user).permit(:name, :email, :password, :password_confirmation)
-#     end
+  #   def user_params
+  #     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  #     pairing_ids [],
+  #     hospitals_attributes: [:id, :name, :location, :practice_field, :benefit]
+  #   end 
+  # end 
+
+
+ 
+  #   end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #     # Before filters
 

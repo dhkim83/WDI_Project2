@@ -1,33 +1,31 @@
-<h1>Dude here's a bunch of great-tasting combos:</h1>
+<h1>Select Option:</h1>
 
-<% Pairings.each do |p| %>
+<%= form_for @pairing do |f| %>
+  <table>
+  <tr>
+    <td></td>
+    <% User.all.each do |u| %>
+      <td><%= u.name %></td>
+    <% end %>
+  </tr>
+  <% Hospital.all.each do |h| %>
+    <tr>
+    <td><%= h.name %></td>
+      <% User.all.each do |u| %>
+      <td>
+        <%#= h.pairings.where(user_id: u.id).first ? "X" : "O" %>
+        <%= check_box_tag "checky_#{h.id}_#{u.id}", "true",
+          h.pairings.where(user_id: u.id).first %>
+      </td>
+    <% end %>
+    </tr>
+  <% end %>
+  </table>
 
-	<b><%= p.pastry.name %></b> along with <b><%= p.bean.name %></b><br />
+  <%#= f.collection_select :bean_id, Bean.all, :id, :name %>
+  <%#= f.collection_select :pastry_id, Pastry.all, :id, :name %>
+  <%= f.submit "Update all the pairings in the constellation above" %>
 <% end %>
 
 
-
-
-
-
-
-
-
-<table>
-<tr>
-	<td></td>
-	<% Pastry.all.each do |p| %>
-		<td><%= p.name %></td>
-	<% end %>
-</tr>
-<% Bean.all.each do |b| %>
-	<tr>
-	<td><%= b.name %></td>
-	<% Pastry.all.each do |p| %>
-		<td>
-			<%= b.pairings.where(pastry_id: p.id).first ? "X" : "O" %>
-		</td>
-	<% end %>
-	</tr>
-<% end %>
-</table>
+<%= link_to "Back to the hospital list!", hospitals_path %>

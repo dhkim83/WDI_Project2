@@ -6,14 +6,9 @@ class Hospital
   field :location, type: String
   field :benefit, type: String 
   
-  
   has_many :pairings
 
-  
-  
-
-
-  end 
+ end 
 
 
 

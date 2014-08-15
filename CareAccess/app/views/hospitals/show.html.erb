@@ -5,9 +5,10 @@
 
 <p>The hospital you have chosen is <%= @hospital.name %>, in the city of <%= @hospital.location %>, practice field is <%= @hospital.practice_field %>, and the current available government benefit is <%= @hospital.benefit %> option. </p>
 
-<%= link_to "Save this hospital on your account", pairings_path(hospital_id: @hospital.id),method: :post %><br>
 
-<%= link_to "Delete", :hospital, method: :delete, data: { confirm: "Are you sure you want to delete #{@hospital.name}?"} %>
+<p>To select this hospital on your list, please click the link below</p>
+<%= link_to "Save this hospital on your select option", pairings_path(hospital_id: @hospital.id),method: :post %><br>
+
 
 
 <%= link_to "Back to the list!", hospitals_path %>

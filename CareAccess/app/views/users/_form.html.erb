@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+	Name: <%= f.text_field :name %>
+	Email: <%= f.text_field :email %>
+	Password: <%= f.password_field :password %>
+	<br />
+
+Save it <%= f.collection_check_boxes :pairing_ids, Pairing.all, :id, :name %>
+
+	<br />

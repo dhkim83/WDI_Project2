@@ -1,13 +1,17 @@
-<h1> Save this hospital on your account </h1>
+<h1> Save this hospital on your list </h1>
+
+
+<%= render 'form' %>
 
 <%= form_for @hospital do |f| %>
-	Name: <%= f.text_field :name, placeholder: "name" %>
-	Practice_field: <%= f.text_field :practice_field, placeholder: "practice_field"%>
-	Location: <%= f.text_field :location, placeholder: "location" %>
-	Benefit: <%= f.text_field :benefit, placeholder: "benefit" %>
+	Name: <%= f.select :name, name_array() %>
+	Practice_field: <%= f.select :practice_field, practice_field_array () %>
+	Location: <%= f.select :location, location_array () %>
+	Benefit: <%= f.select :benefit, benefit_array () %>
+<%= f.submit " Submit" %>
 
-	<%= f.submit "Click here to save this hospital on your account" %>
+<%= link_to "", pairings_path %>
 
 <% end %>
 
-<%= link_to "Back to the list!", hospitals_path %>
+<%= link_to "Back to the hospital list", hospitals_path %>

@@ -1,6 +1,6 @@
 class User
   include Mongoid::Document
-  include ActiveModel::SecurePassword 
+  include ActiveModel::SecurePassword
   validates_presence_of :name, :email
   
   field :name, type: String
@@ -12,7 +12,7 @@ class User
 
 	has_many :pairings
 
-
+# accepts_nested_attributes_for :hospitals 
 # validates :name, presence: true
 
 #   validates :email, presence: true
@@ -20,3 +20,27 @@ class User
 
 end 
 
+
+# def pairings
+#     Pairings.find pairing_ids
+#   end
+
+#  def pairing_ids
+#     ret = []
+#     self.user_pairings.each do |p|
+#       ret << p.pairing_id if p.pairing_id
+
+# # def pairing_ids
+# # 	self.user_pairings.map (&:hospital_id)
+# # end
+#     end
+#   
+
+#   def pairing_ids=(list)
+#     self.user_pairings.destroy
+#     list.each do |pairing_id|
+#       self.user_pairings.create(pairing_id: pairing_id)
+#     end
+#   end
+
+  

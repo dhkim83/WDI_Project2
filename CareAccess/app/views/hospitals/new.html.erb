@@ -4,10 +4,10 @@
 <%= render 'form' %>
 
 <%= form_for @hospital do |f| %>
-	Name: <%= f.select :name, name_array() %>
-	Practice_field: <%= f.select :practice_field, practice_field_array () %>
-	Location: <%= f.select :location, location_array () %>
-	Benefit: <%= f.select :benefit, benefit_array () %>
+  Name: <%= f.select :name, name_array() %>
+  Practice_field: <%= f.select :practice_field, practice_field_array () %>
+  Location: <%= f.select :location, location_array () %>
+  Benefit: <%= f.select :benefit, benefit_array () %>
 <%= f.submit " Submit" %>
 
 <%= link_to "", pairings_path %>

@@ -1,12 +1,13 @@
-<h1>Hospital List</h1>
+<h1>Hospital List in Health Care Shortage Area</h1>
 <p>
-	<%= link_to "Show All", hospitals_path(hospitalfilter:"showall") %>
-	<%= link_to "By Hospital Name Only", hospitals_path(hospitalfilter:"name") %>
-  <%= link_to "By City Only", hospitals_path(hospitalfilter:"location") %>
-<%= link_to "By Primary Care Only", hospitals_path(hospitalfilter:"primary_care")%>
-<%= link_to "By Registered Nurse Only", hospitals_path(hospitalfilter:"registered_nurse")%>
-<%= link_to "By State Gov Benefit Only", hospitals_path(hospitalfilter:"state") %>
-<%= link_to "By Federal Gov Benefit Only", hospitals_path(hospitalfilter:"federal")%>
+  <div class="link">
+  <lnk class="link-md-4"><%= link_to "Show All", hospitals_path(hospitalfilter:"showall") %>
+  <lnk class="link-md-1"><%= link_to "By Hospital Name Only", hospitals_path(hospitalfilter:"name") %>
+  <lnk class="link-md-1"><%= link_to "By City Only", hospitals_path(hospitalfilter:"location") %>
+<lnk class="lnk-md-1"><%= link_to "By Primary Care Only", hospitals_path(hospitalfilter:"primary_care")%>
+<lnk class="lnk-md-1"><%= link_to "By Registered Nurse Only", hospitals_path(hospitalfilter:"registered_nurse")%>
+<lnk class="lnk-md-1"><%= link_to "By State Gov Benefit Only", hospitals_path(hospitalfilter:"state") %>
+<lnk class="lnk-md-1"><%= link_to "By Federal Gov Benefit Only", hospitals_path(hospitalfilter:"federal")%>
   
   <br>
 </p>
@@ -16,12 +17,14 @@
   <li>
     <strong> <%= h.name %> </strong> 
     [<%= h.name %>]
-    <%= link_to "Click here for more information", hospital_path(h) %>
-	</li>
+    <lnk class="lnk-md-4"><%= link_to "Click here for more information", hospital_path(h) %>
+  </li>
 
 <% end %>
 </ul>
 
+
+</div>
 
 
 

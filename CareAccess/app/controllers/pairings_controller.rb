@@ -1,15 +1,15 @@
 class PairingsController < ApplicationController
-	before_action :set_user, only: [:index, :show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index, :show, :edit, :update, :destroy]
 
-	def index
-		@pairings = Pairing.all
+  def index
+    @pairings = Pairing.all
     @pairing = Pairing.new 
-	end 
+  end 
 
-	def update
-	  @pairing = Pairing.save
+  def update
+    @pairing = Pairing.save
   redirect_to pairings_path
-	end 
+  end 
 
   def create
     Pairing.destroy_all
@@ -75,5 +75,3 @@ end
 #       end
 #     end
 #   end
-
-

@@ -2,16 +2,21 @@
 
 
 <%= form_for @user do |f| %>
-	Name <%= f.text_field :name, placeholder: "create your user name" %><br />
-	Email <%= f.text_field :email, placeholder: "enter your email address" %><br />
+  Name <%= f.text_field :name, placeholder: "create your user name" %><br />
+  Email <%= f.text_field :email, placeholder: "enter your email address" %><br />
 
-	<%= f.password_field :password, placeholder: "create a password" %><br />
-	<%= f.password_field :password_confirmation, placeholder: "re-enter a password" %>
+  <%= f.password_field :password, placeholder: "create a password" %><br />
+  <%= f.password_field :password_confirmation, placeholder: "re-enter a password" %>
 
-	<%= f.submit "Create your Account", class: "btn btn-primary btn-large" %>
+  <%= f.submit "Create your Account", class: "btn btn-primary btn-large" %>
 
 <% end %>
 
 <%= link_to "Go back to the main page!", users_path %>
 
 
+
+
+
+
+  

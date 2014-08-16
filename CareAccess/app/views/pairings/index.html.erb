@@ -5,27 +5,57 @@
   <tr>
     <td></td>
     <% User.all.each do |u| %>
-      <td><%= u.name %></td>
+     
+     <% if u == current_user %>
+
+<td><%= u.name %></td>
+
+ <% end %>
+
+
     <% end %>
   </tr>
+
   <% Hospital.all.each do |h| %>
     <tr>
     <td><%= h.name %></td>
       <% User.all.each do |u| %>
-      <td>
-        <%#= h.pairings.where(user_id: u.id).first ? "X" : "O" %>
-        <%= check_box_tag "checkbox_#{h.id}_#{u.id}", "true",
-          h.pairings.where(user_id: u.id).first %>
-      </td>
-    <% end %>
+
+        <% if u == current_user %>
+
+          <td>
+            <%#= h.pairings.where(user_id: u.id).first ? "X" : "O" %>
+            <%= check_box_tag "checky_#{h.id}_#{u.id}", "true",
+              h.pairings.where(user_id: u.id).first %>
+          </td>
+
+        <% end %>
+
+      <% end %>
     </tr>
   <% end %>
   </table>
 
+
+    
+ 
   <%#= f.collection_select :bean_id, Bean.all, :id, :name %>
   <%#= f.collection_select :pastry_id, Pastry.all, :id, :name %>
   <%= f.submit "Update all the pairings in the constellation above" %>
 <% end %>
 
 
-<%= link_to "Back to the hospital list!", hospitals_path %>
+
+
+<%= link_to "Back to the main page", users_path %>
+
+
+
+
+
+
+   
+
+
+
+

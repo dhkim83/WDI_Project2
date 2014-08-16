@@ -7,7 +7,8 @@ class PairingsController < ApplicationController
 	end 
 
 	def update
-#		@pairing = Pairing.save
+	  @pairing = Pairing.save
+  redirect_to pairings_path
 	end 
 
   def create
@@ -30,18 +31,31 @@ class PairingsController < ApplicationController
 
 # end
 
+
   def show
     @pairing = Pairing.find(params[:id]) 
+
+# @pairing =Pairing.where(:name => "name")
+  # @pairing = Pairing.all.order("name ASC")
+    
   end
+
+   def save
+        create_or_update
+      end
+  
+end 
+
+  
 
   private
 
   def set_user
     if !current_user
       redirect_to hospitals_path
+      end
     end
-  end
-end
+ 
 
 
 # else
